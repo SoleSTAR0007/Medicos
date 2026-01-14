@@ -1,4 +1,4 @@
-package com.medicare.backend.model;
+package com.medico.backend.model;
 
 import java.time.LocalDateTime;
 

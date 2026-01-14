@@ -1,8 +1,8 @@
-package com.medicare.backend.controller;
+package com.medico.backend.controller;
 
-import com.medicare.backend.dto.AppointmentRequest;
-import com.medicare.backend.model.Appointment;
-import com.medicare.backend.service.AppointmentService;
+import com.medico.backend.dto.AppointmentRequest;
+import com.medico.backend.model.Appointment;
+import com.medico.backend.service.AppointmentService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

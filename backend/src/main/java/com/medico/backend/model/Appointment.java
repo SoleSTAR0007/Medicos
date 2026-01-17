@@ -1,23 +1,34 @@
 package com.medico.backend.model;
 
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "appointments")
 public class Appointment {
 
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
+
    private Long patientId;
    private Long doctorId;
+
    private String problem;
    private String date;
    private String time;
+
    private String status;
+
    private LocalDateTime createdAt;
 
-   public Appointment() {}
+   public Appointment() {
+      this.createdAt = LocalDateTime.now();
+      this.status = "CONFIRMED";
+   }
 
-   public Appointment(Long id, Long patientId, Long doctorId,
+   public Appointment(Long patientId, Long doctorId,
                      String problem, String date, String time) {
-      this.id = id;
       this.patientId = patientId;
       this.doctorId = doctorId;
       this.problem = problem;
@@ -27,6 +38,7 @@ public class Appointment {
       this.createdAt = LocalDateTime.now();
    }
 
+   
    public Long getId() { return id; }
    public Long getPatientId() { return patientId; }
    public Long getDoctorId() { return doctorId; }

@@ -10,22 +10,12 @@ import java.util.List;
 public class AppointmentService {
 
     private final List<Appointment> appointments = new ArrayList<>();
-    private Long idCounter = 1L;
 
-    public Appointment bookAppointment(Long patientId,
-                                        Long doctorId,
-                                        String problem,
-                                        String date,
-                                        String time) {
+    public Appointment bookAppointment(Long patientId,Long doctorId, String problem, String date,String time)
+    {
 
-        Appointment appointment = new Appointment(
-                idCounter++,
-                patientId,
-                doctorId,
-                problem,
-                date,
-                time
-        );
+        Appointment appointment =
+                new Appointment(patientId, doctorId, problem, date, time);
 
         appointments.add(appointment);
         return appointment;

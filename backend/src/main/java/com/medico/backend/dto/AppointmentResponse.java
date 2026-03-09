@@ -18,15 +18,13 @@ public class AppointmentResponse {
       this.status = status;
    }
 
-   public String getMessage() {
-      return message;
-   }
+    // Getters
+   public String getMessage() { return message; }
+   public Long getAppointmentId() { return appointmentId; }
+   public String getStatus() { return status; }
 
-   public Long getAppointmentId() {
-      return appointmentId;
-   }
-
-   public String getStatus() {
-      return status;
-   }
+    // Setters
+   public void setMessage(String message) { this.message = message; }
+   public void setAppointmentId(Long appointmentId) { this.appointmentId = appointmentId; }
+   public void setStatus(String status) { this.status = status; }
 }
